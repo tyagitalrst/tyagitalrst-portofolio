@@ -90,7 +90,7 @@ export default function Experience() {
                 justify="center"
                 alignItems="center"
                 spacing={0}>
-                <Grid item item lg={10} xs={12}>
+                <Grid item lg={10} xs={12}>
                     <h2 className={classes.intro}><span className={classes.smallIntro}>02.</span> Where I've Worked</h2>
                     <h4 className={classes.jobTitle}>Front-end Engineer Intern<span className={classes.workAt}> @Urbanhire</span></h4>
                     <p className={classes.date}>June - August 2019</p>

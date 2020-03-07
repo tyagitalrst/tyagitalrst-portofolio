@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import ProfPict from '../img/profict.svg';
+import ProfPict from '../img/profict.png';
 import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles(theme => ({
@@ -44,6 +44,16 @@ const useStyles = makeStyles(theme => ({
             transform: "scale(1.2)"
         }
     },
+    imgTech1: {
+        width: "auto",
+        height: "60px",
+        filter: "grayscale(50%)",
+        transition: "transform .2s",
+        '&:hover': {
+            filter: "none",
+            transform: "scale(1.2)"
+        }
+    },
 
 
 }));
@@ -54,7 +64,8 @@ export default function About() {
     return (
         <section id="about"
             className={classes.root}
-            data-aos="fade-up">
+            data-aos="fade-up"
+            data-aos-duration="1000">
             <Grid container spacing={0}>
                 <Grid item lg={8} xs={12}>
                     <h2 className={classes.intro}><span className={classes.smallIntro}>01.</span> About Me</h2>
@@ -78,7 +89,7 @@ export default function About() {
                         </Grid>
                         <Grid item xs={4} lg={2}>
                             <Tooltip title="HTLM5">
-                                <img className={classes.imgTech} src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png" alt="html" />
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/html-5.svg" alt="html" />
                             </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
@@ -142,7 +153,7 @@ export default function About() {
                         </Grid>
                         <Grid item xs={4} lg={2}>
                             <Tooltip title="Django-REST">
-                                <img className={classes.imgTech} src="https://static.cdn-cdpl.com/source/214/logo-image(700x350-crop).png" alt="rest" />
+                                <img className={classes.imgTech1} src="https://static.cdn-cdpl.com/source/214/logo-image(700x350-crop).png" alt="rest" />
                             </Tooltip>
                         </Grid>
                     </Grid>
@@ -154,7 +165,7 @@ export default function About() {
                         </Grid>
                         <Grid item xs={4} lg={2}>
                             <Tooltip title="Android Studio">
-                                <img className={classes.imgTech} src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Android_Studio_icon.svg/1200px-Android_Studio_icon.svg.png" alt="android" />
+                                <img className={classes.imgTech} src="https://i.ya-webdesign.com/images/android-studio-png.png" alt="android" />
                             </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
