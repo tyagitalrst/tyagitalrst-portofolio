@@ -39,7 +39,18 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.info.main,
         fontSize: "1rem",
         paddingLeft: "56px",
-        fontWeight: "500"
+        fontWeight: "500",
+        '& p': {
+            margin: "0px",
+        },
+        '& a': {
+            textDecoration: "none",
+            fontWeight: "bold",
+            color: theme.palette.secondary.main,
+            '&:hover': {
+                color: theme.palette.success.main,
+            }
+        }
     },
     iconPad: {
         maxHeight: "24px",
@@ -56,12 +67,25 @@ export default function Experience() {
     }
 
     const rows = [
-        createData('1', 'Revamp web Urbanhire (urbanhire.com), implementing UI/UX design mock-up into code using LESS, Jade, and JavaScript. And also ensure the web is responsive that can viewed on mobile as well as desktop'),
-        createData('2', 'Revamp blog Urbanhire (urbanhire.com/blog) and web Urbanhire resources (resources.urbanhire.com). Both of the web is a Wordpress site.Responsible for making a new Wordpress template for the blog and the Urbanhire resources web.Implementing UI / UX design mockup into code using HTML, SASS, JavaScript and PHP for code the server - side of Wordpress.And also ensure the web is responsive that can viewed on mobile as well as desktop.i'),
+        createData('1',
+            <p> Revamp
+                <span>
+                    <a href="https://www.urbanhire.com/" target="_blank" rel="noopener noreferrer"> web Urbanhire </a>
+                </span>, implementing UI/UX design mock-up into code using LESS, Jade, and JavaScript. And also ensure the web is responsive that can viewed on mobile as well as desktop.
+            </p>),
+        createData('2',
+            <p> Revamp
+            <span>
+                    <a href="https://www.urbanhire.com/blog/" target="_blank" rel="noopener noreferrer"> blog Urbanhire </a>
+                </span>and
+            <span>
+                    <a href="https://resources.urbanhire.com/" target="_blank" rel="noopener noreferrer"> web Urbanhire resources</a>
+                </span>. Both of the web is a Wordpress site. Responsible for making a new Wordpress template for the blog and the Urbanhire resources web. Implementing UI / UX design mockup into code using HTML, SASS, JavaScript and PHP for code the server - side of Wordpress. And also ensure the web is responsive that can viewed on mobile as well as desktop.
+            </p>)
     ];
 
     return (
-        <section id="experience" className={classes.root}>
+        <section id="experience" className={classes.root} data-aos="zoom-in" data-aos-duration="2000">
             <Grid container
                 justify="center"
                 alignItems="center"

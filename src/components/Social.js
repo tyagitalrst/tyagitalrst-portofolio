@@ -24,6 +24,10 @@ const useStyles = makeStyles(theme => ({
     },
     icon: {
         height: '20px',
+        transition: "transform .2s",
+        '&:hover':{
+            transform: "scale(1.5)"
+        }
     },
     rootMobile: {
         fontFamily: "Lato",

@@ -34,7 +34,7 @@ export default function WorkCard(props) {
     const classes = useStyles();
 
     return (
-        <Card className={classes.root}>
+        <Card className={classes.root} data-aos="zoom-in-down" data-aos-duration="2000">
             <a href={props.link} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                     className={classes.media}

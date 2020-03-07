@@ -3,6 +3,8 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import ButtonAppBar from './components/Appbar';
 import FullWidthGrid from './components/Layout';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const theme = createMuiTheme({
   palette: {
@@ -31,6 +33,8 @@ const theme = createMuiTheme({
 });
 
 function App() {
+  AOS.init()
+  
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

@@ -2,10 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ProfPict from '../img/profict.svg';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        margin: "10vh 0",
+        margin: "20px 0 20px 0",
+        padding: "80px 0",
         fontFamily: "Lato",
         minHeight: "85vh",
     },
@@ -23,6 +25,7 @@ const useStyles = makeStyles(theme => ({
         margin: "50% 0",
         width: "300px",
         filter: "grayscale(40%)",
+        transition: "transform 1s",
         '&:hover': {
             filter: "none"
         }
@@ -32,11 +35,13 @@ const useStyles = makeStyles(theme => ({
         fontSize: "1.125rem",
     },
     imgTech: {
-        width: "auto",
+        width: "60px",
         height: "60px",
         filter: "grayscale(50%)",
+        transition: "transform .2s",
         '&:hover': {
-            filter: "none"
+            filter: "none",
+            transform: "scale(1.2)"
         }
     },
 
@@ -47,7 +52,9 @@ export default function About() {
     const classes = useStyles();
 
     return (
-        <section id="about" className={classes.root}>
+        <section id="about"
+            className={classes.root}
+            data-aos="fade-up">
             <Grid container spacing={0}>
                 <Grid item lg={8} xs={12}>
                     <h2 className={classes.intro}><span className={classes.smallIntro}>01.</span> About Me</h2>
@@ -60,73 +67,115 @@ export default function About() {
                     <p className={classes.text}>Here are a few technologies I've been working with recently:</p>
                     <Grid container spacing={6}>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/200px-Sass_Logo_Color.svg.png" alt="sass" />
+                            <Tooltip title="SASS">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" alt="sass" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://miro.medium.com/max/672/1*O_NwDtfHb1sirw6CAbyoxg.png" alt="less" />
+                            <Tooltip title="LESS">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/less.svg" alt="less" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://upload.wikimedia.org/wikipedia/commons/2/21/Devicon-html5-plain-wordmark.svg" alt="html" />
+                            <Tooltip title="HTLM5">
+                                <img className={classes.imgTech} src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png" alt="html" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="http://1.bp.blogspot.com/-898JqWtZQyg/Ul0w5wvvXaI/AAAAAAAAAWc/OuSAxsJtAz8/s1600/CSS3.png" alt="css" />
+                            <Tooltip title="CSS3">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="css" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/jade-3.svg" alt="jade" />
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={6}>
-                        <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://www.freepngimg.com/thumb/java/85390-java-language-text-programming-logo-programmer.png" alt="java" />
-                        </Grid>
-                        <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/200px-React-icon.svg.png" alt="react" />
-                        </Grid>
-                        <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://cdn.iconscout.com/icon/free/png-512/django-11-1175036.png" alt="django" />
-                        </Grid>
-                        <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://www.stickpng.com/assets/images/5848152fcef1014c0b5e4967.png" alt="python" />
-                        </Grid>
-                        <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://mail.easyprogramming.net/logo/js.png" alt="js" />
+                            <Tooltip title="Jade">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/jade-3.svg" alt="jade" />
+                            </Tooltip>
                         </Grid>
                     </Grid>
                     <Grid container spacing={6}>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/1280px-Nextjs-logo.svg.png" alt="next" />
+                            <Tooltip title="Java">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/java.svg" alt="java" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://cdn.iconscout.com/icon/free/png-512/jquery-8-1175153.png" alt="jquery" />
+                            <Tooltip title="React">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/react.svg" alt="react" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://cdn.iconscout.com/icon/free/png-512/postgresql-226047.png" alt="sql" />
+                            <Tooltip title="Django">
+                                <img className={classes.imgTech} src="https://cdn.iconscout.com/icon/free/png-512/django-11-1175036.png" alt="django" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="git" />
+                            <Tooltip title="Python">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="python" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://static.cdn-cdpl.com/source/214/logo-image(700x350-crop).png" alt="rest" />
+                            <Tooltip title="JavaScript">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/javascript-4.svg" alt="js" />
+                            </Tooltip>
                         </Grid>
                     </Grid>
                     <Grid container spacing={6}>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://miro.medium.com/max/405/1*rM5eV-GbkiHgpD3MV-H6Hg.png" alt="kotlin" />
+                            <Tooltip title="NextJS">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/nextjs-3.svg" alt="next" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Android_Studio_icon.svg/1200px-Android_Studio_icon.svg.png" alt="android" />
+                            <Tooltip title="jQuery">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/jquery-1.svg" alt="jquery" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://camo.githubusercontent.com/4fc4dd8df88ded608468defa8fbc0ef0641e8442/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f313630302f312a365867664443566e3831415958363858766432492d674032782e706e67" alt="figma" />
+                            <Tooltip title="Postgresql">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="sql" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/invision.svg" alt="invision" />
+                            <Tooltip title="Git">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="git" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://www.stickpng.com/assets/images/58482beecef1014c0b5e4a36.png" alt="trello" />
+                            <Tooltip title="Django-REST">
+                                <img className={classes.imgTech} src="https://static.cdn-cdpl.com/source/214/logo-image(700x350-crop).png" alt="rest" />
+                            </Tooltip>
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={6}>
+                        <Grid item xs={4} lg={2}>
+                            <Tooltip title="Kotlin">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/kotlin-1.svg" alt="kotlin" />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={4} lg={2}>
-                            <img className={classes.imgTech} src="https://lh3.googleusercontent.com/GkgChJMixx9JAmoUi1majtfpjg1Ra86gZR0GCehJfVcOGQI7Ict_TVafXCtJniVn3R0" alt="jira" />
+                            <Tooltip title="Android Studio">
+                                <img className={classes.imgTech} src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Android_Studio_icon.svg/1200px-Android_Studio_icon.svg.png" alt="android" />
+                            </Tooltip>
+                        </Grid>
+                        <Grid item xs={4} lg={2}>
+                            <Tooltip title="Figma">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" alt="figma" />
+                            </Tooltip>
+                        </Grid>
+                        <Grid item xs={4} lg={2}>
+                            <Tooltip title="Invision">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/invision.svg" alt="invision" />
+                            </Tooltip>
+                        </Grid>
+                        <Grid item xs={4} lg={2}>
+                            <Tooltip title="Trello">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="trello" />
+                            </Tooltip>
+                        </Grid>
+                        <Grid item xs={4} lg={2}>
+                            <Tooltip title="Jira">
+                                <img className={classes.imgTech} src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" alt="jira" />
+                            </Tooltip>
                         </Grid>
                     </Grid>
                 </Grid>

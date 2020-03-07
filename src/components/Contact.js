@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
         fontFamily: "Lato",
         minHeight: "85vh",
         textAlign: "center",
-    },    
+    },
     intro: {
         color: theme.palette.secondary.contrastText,
         fontWeight: "600",
@@ -36,7 +36,12 @@ export default function Contact() {
     const classes = useStyles();
 
     return (
-        <section id="contact" className={classes.root}>
+        <section id="contact"
+            className={classes.root}
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="700"
+            data-aos-offset="0">
             <Grid container
                 justify="center"
                 alignItems="center"

@@ -50,7 +50,7 @@ export default function Experience(props) {
     return (
         <div>
             {props.position === 'left' ?
-                <Grid container spacing={4} className={classes.root}>
+                <Grid container spacing={4} className={classes.root} data-aos="fade-left" data-aos-duration="1000">
                     <Grid item lg={6} className={classes.detail1}>
                         <h3 className={classes.titleDetail}>Featured Project</h3>
                         <a className={classes.titleProject} href={props.link} target="_blank" rel="noopener noreferrer">
@@ -69,7 +69,7 @@ export default function Experience(props) {
                         </a>
                     </Grid>
                 </Grid> :
-                <Grid container spacing={4} className={classes.root}>
+                <Grid container spacing={4} className={classes.root} data-aos="fade-right" data-aos-duration="1000">>
                     <Grid item lg={7}>
                         <a href={props.link} target="_blank" rel="noopener noreferrer">
                             <img src={props.image} alt={props.alt} />

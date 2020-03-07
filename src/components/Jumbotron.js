@@ -3,6 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
+    '@keyframes color-change': {
+        from: {color: theme.palette.info.main},
+        to: {color: theme.palette.success.main}
+    },
     root: {
         margin: "25vh 0 0",
         fontFamily: "Lato",
@@ -19,13 +23,19 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.warning.main,
         fontSize: "80px",
         fontWeight: "600",
-        margin: "0px 0px -10px 0px;"
+        margin: "0px 0px -10px 0px"
     },
     role: {
         color: theme.palette.info.main,
         fontSize: "80px",
         fontWeight: "600",
-        margin: "0 0 20px 0"
+        margin: "0 0 20px 0",
+        '& span':{
+            animationName: "$color-change",
+            animationDuration: "3s",
+            animationTimingFunction: "linear",
+            animationIterationCount: "infinite",
+        }
     },
     subtitle: {
         color: theme.palette.info.main,
@@ -36,25 +46,25 @@ const useStyles = makeStyles(theme => ({
         fontFamily: "B612 Mono",
         marginTop: "25px",
     },
-
-
-
 }));
 
 export default function Jumbotron() {
     const classes = useStyles();
 
     return (
-        <section id="intro" className={classes.root}>
+        <section id="intro"
+            className={classes.root}
+            data-aos="fade-up"
+            data-aos-duration="2000">
             <h2 className={classes.greeting}>Hi, my name is</h2>
             <h2 className={classes.name}>
                 Tyagita Larasati.
             </h2>
             <h3 className={classes.role}>
-                I'm a software engineer.
+                I'm a <span>software engineer</span>.
             </h3>
             <p className={classes.subtitle}>
-                I'm a final year computer science student based in Jakarta. <br />
+                A final year computer science student based in Jakarta. <br />
                 Highly interested in web and mobile development.<br />
             </p>
             <Button className={classes.btn} color="secondary" variant="outlined" href="mailto:tyagitalarasati@gmail.com">

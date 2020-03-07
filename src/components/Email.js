@@ -22,7 +22,13 @@ const useStyles = makeStyles(theme => ({
             writingMode: "vertical-rl",
             textOrientation: "sideways-right",
             letterSpacing: "2px",
-            textDecoration: "none"
+            textDecoration: "none",
+            transition: "transform .2s",
+            '&:hover, &:active':{
+                color: theme.palette.success.main,
+                fontWeight: "bold",
+                transform: "scale(1.1)"
+            }
         }
     },
 }));

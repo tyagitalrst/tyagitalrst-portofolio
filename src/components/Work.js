@@ -71,7 +71,7 @@ export default function Experience() {
         <section id="work" className={classes.root}>
             <Grid container spacing={0}>
                 <Grid item xs={12}>
-                    <h2 className={classes.intro}><span className={classes.smallIntro}>03.</span> Some Things I've Built</h2>
+                    <h2 className={classes.intro} data-aos="fade-up" data-aos-duration="800"><span className={classes.smallIntro}>03.</span> Some Things I've Built</h2>
                     <Project
                         position={"left"}
                         title={"Hisana Scatter Map Visualization"}
@@ -97,7 +97,7 @@ export default function Experience() {
                                 Java <span>• </span>
                                 Django-REST
                             </p>}
-                        link={"https://hisana.now.sh/"}
+                        link={""}
                         image={Sumbangin}
                         alt={"Sumbangin"}
                     />

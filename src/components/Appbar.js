@@ -23,6 +23,12 @@ const useStyles = makeStyles(theme => ({
         margin: "0 10px",
         fontFamily: "B612 Mono",
         textTransform: "unset",
+        transition: "transform .2s",
+        '&:hover': {
+            '& >span': {
+                transform: "scale(1.1)"
+            }
+        }
     },
     contrast: {
         color: theme.palette.secondary.main,
@@ -72,7 +78,7 @@ export default function ButtonAppBar(props) {
                                     <span className={classes.contrast}>01.</span> About
                                 </Button>
                             </Link>
-                            <Link to="experience" spy={true} smooth={true} duration={800} offset={-50}>
+                            <Link to="experience" spy={true} smooth={true} duration={1200} offset={-100}>
                                 <Button className={classes.btn} color="inherit">
                                     <span className={classes.contrast}>02.</span> Experience
                                 </Button>
@@ -82,7 +88,7 @@ export default function ButtonAppBar(props) {
                                     <span className={classes.contrast}>03.</span> Work
                                 </Button>
                             </Link>
-                            <Link to="contact" spy={true} smooth={true} duration={800} offset={-50}>
+                            <Link to="contact" spy={true} smooth={true} duration={1500} offset={-50}>
                                 <Button className={classes.btn} color="inherit">
                                     <span className={classes.contrast}>04.</span> Contact
                                 </Button>
