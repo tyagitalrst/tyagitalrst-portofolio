@@ -77,7 +77,9 @@ export default function Experience(props) {
                     </Grid>
                     <Grid item lg={6} className={classes.detail2}>
                         <h3 className={classes.titleDetail}>Featured Project</h3>
-                        <h2 className={classes.titleProject} href={props.link} target="_blank" rel="noopener noreferrer">{props.title}</h2>
+                        <a className={classes.titleProject} href={props.link} target="_blank" rel="noopener noreferrer">
+                            <h2>{props.title}</h2>
+                        </a>
                         <Card className={classes.projectDetail}>
                             <CardContent>
                                 <p>{props.detail}</p>
