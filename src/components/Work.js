@@ -89,7 +89,7 @@ export default function Experience() {
                     />
                     <Project
                         position={"right"}
-                        title={"Sumbang.in Apps"}
+                        title={"Sumbang.in App"}
                         detail={"Developed a platform for donate pre-loved goods using Android in Java with Django-REST framework for the backend."}
                         tech={
                             <p className={classes.tech}>
@@ -97,7 +97,7 @@ export default function Experience() {
                                 Java <span>• </span>
                                 Django-REST
                             </p>}
-                        link={""}
+                        link={"https://www.behance.net/gallery/83591001/Sumbangin"}
                         image={Sumbangin}
                         alt={"Sumbangin"}
                     />
