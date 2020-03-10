@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles(theme => ({
     '@keyframes color-change': {
         from: {color: theme.palette.info.main},
-        to: {color: theme.palette.success.main}
+        to: {color: theme.palette.warning.contrastText}
     },
     root: {
         margin: "25vh 0 0",
@@ -17,19 +17,25 @@ const useStyles = makeStyles(theme => ({
         fontSize: "18px",
         fontFamily: "B612 Mono",
         fontWeight: "normal",
-        margin: "0;"
+        margin: "0;",
     },
     name: {
         color: theme.palette.warning.main,
         fontSize: "80px",
         fontWeight: "600",
-        margin: "0px 0px -10px 0px"
+        margin: "0px 0px -10px 0px",
+        [theme.breakpoints.down(959)] : {
+            fontSize: "50px",
+          }
     },
     role: {
         color: theme.palette.info.main,
         fontSize: "80px",
         fontWeight: "600",
         margin: "0 0 20px 0",
+        [theme.breakpoints.down(959)] : {
+            fontSize: "50px",
+          },
         '& span':{
             animationName: "$color-change",
             animationDuration: "3s",

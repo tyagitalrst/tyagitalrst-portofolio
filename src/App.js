@@ -9,25 +9,26 @@ import '../node_modules/aos/dist/aos.css';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#22262A',
-      contrastText: '#ECD5BB'
+      main: '#1F2933',
+      contrastText: '#F5F7FA'
     },
     secondary: {
-      main: '#00735C',
-      contrastText: '#ECD5BB'
+      main: '#00897B',
+      contrastText: '#F5F7FA'
     },
     info: {
-      main: '#786F62'
+      main: '#CBD2D9'
     },
     success: {
-      main: '#FED766'
+      main: '#3E4C59'
     },
     warning: {
-      main: '#ECD5BB'
+      main: '#F5F7FA',
+      contrastText: '#FFE380'
     },
     background: {
-      default: '#22262A',
-      paper: '#FED766'
+      default: '#1F2933',
+      paper: '#3E4C59'
     },
   }
 });

@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
             textDecoration: "none",
             transition: "transform .2s",
             '&:hover, &:active':{
-                color: theme.palette.success.main,
+                color: theme.palette.warning.contrastText,
                 fontWeight: "bold",
                 transform: "scale(1.1)"
             }

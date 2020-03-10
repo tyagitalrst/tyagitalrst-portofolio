@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
         maxWidth: 345,
         background: theme.palette.background.paper,
         '& h3': {
-            color: theme.palette.info.main
+            color: theme.palette.secondary.contrastText
         },
         '& p': {
             color: theme.palette.secondary.main,
@@ -43,8 +43,8 @@ export default function WorkCard(props) {
                 />
             </a>
             <CardContent>
-                <h3 className={classes.title}>{props.title}</h3>
-                <p className={classes.subtitle}>{props.subtitle}</p>
+                <h3 >{props.title}</h3>
+                <p >{props.subtitle}</p>
             </CardContent>
             <CardActions disableSpacing>
                 <Button href={props.link} target="_blank" rel="noopener noreferrer" className={classes.btn} size="small" color="secondary" variant="outlined">

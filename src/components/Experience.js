@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
             fontWeight: "bold",
             color: theme.palette.secondary.main,
             '&:hover': {
-                color: theme.palette.success.main,
+                color: theme.palette.warning.contrastText,
             }
         }
     },

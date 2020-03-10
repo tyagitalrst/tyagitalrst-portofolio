@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.secondary.contrastText,
         textDecoration: "none",
         '&:active, &:hover': {
-            color: theme.palette.secondary.main,
+            color: theme.palette.warning.contrastText,
         }
     },
     projectDetail: {
@@ -69,7 +69,7 @@ export default function Experience(props) {
                         </a>
                     </Grid>
                 </Grid> :
-                <Grid container spacing={4} className={classes.root} data-aos="fade-right" data-aos-duration="1000">>
+                <Grid container spacing={4} className={classes.root} data-aos="fade-right" data-aos-duration="1000">
                     <Grid item lg={7}>
                         <a href={props.link} target="_blank" rel="noopener noreferrer">
                             <img src={props.image} alt={props.alt} />
