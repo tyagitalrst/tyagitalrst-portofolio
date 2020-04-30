@@ -70,7 +70,7 @@ export default function About() {
                 <Grid item lg={8} xs={12}>
                     <h2 className={classes.intro}><span className={classes.smallIntro}>01.</span> About Me</h2>
                     <p className={classes.text}>
-                        Hi! I'm Tya, a final computer science student based in Jakarta.<br />
+                        Hi! I'm Tya, a final year computer science student based in Jakarta.<br />
                         I have high curiosity and willingness to learn. I'm really interested<br />
                         with web and mobile development. I like to translating design into code<br />
                         and making sure the functionality works well based on the usabality.<br />
