@@ -73,7 +73,7 @@ export default function About() {
                         Hi! I'm Tya, a final year computer science student based in Jakarta.<br />
                         I have high curiosity and willingness to learn. I'm really interested<br />
                         with web and mobile development. I like to translating design into code<br />
-                        and making sure the functionality works well based on the usabality.<br />
+                        and making sure the functionality works well based on the usability.<br />
                     </p>
                     <p className={classes.text}>Here are a few technologies I've been working with recently:</p>
                     <Grid container spacing={6}>
