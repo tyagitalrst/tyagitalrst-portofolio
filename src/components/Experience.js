@@ -80,7 +80,7 @@ export default function Experience() {
                 </span>and
             <span>
                     <a href="https://resources.urbanhire.com/" target="_blank" rel="noopener noreferrer"> web Urbanhire resources</a>
-                </span>. Both of the web is a Wordpress site. Responsible for making a new Wordpress template for the blog and the Urbanhire resources web. Implementing UI / UX design mockup into code using HTML, SASS, JavaScript and PHP for code the server - side of Wordpress. And also ensure the web is responsive that can viewed on mobile as well as desktop.
+                </span>. Both of the web is a Wordpress site. Responsible for making a new Wordpress template for the blog and the Urbanhire resources web. Implementing UI / UX design mock-up into code using HTML, SASS, JavaScript and PHP for code the server - side of Wordpress. And also ensure the web is responsive that can viewed on mobile as well as desktop.
             </p>)
     ];
 
