@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 
@@ -52,6 +53,23 @@ const useStyles = makeStyles(theme => ({
             }
         }
     },
+    textRight: {
+        color: theme.palette.info.main,
+        fontSize: "1rem",
+        paddingRight: "26px",
+        fontWeight: "500",
+        '& p': {
+            margin: "0px",
+        },
+        '& a': {
+            textDecoration: "none",
+            fontWeight: "bold",
+            color: theme.palette.secondary.main,
+            '&:hover': {
+                color: theme.palette.warning.contrastText,
+            }
+        }
+    },
     iconPad: {
         maxHeight: "24px",
         minHeight: "24px",
@@ -67,21 +85,37 @@ export default function Experience() {
     }
 
     const rows = [
+        [
+        createData('1',
+            <p> Write performant and maintainable code for new features and functionality 
+                using JavaScript (ES6), VueJs, HTML, and (S)CSS.
+            </p>
+        ),
+        createData('2',
+            <p> Perform debug, bug fixes and code reviews.</p>
+        ),
+        createData('3',
+            <p>Communicate and collaborate with engineers, designers, and product managers on daily basis to identify, 
+                manage risks, issues, and opportunities in features.</p>
+        ),
+        ],
+        [
         createData('1',
             <p> Revamp
                 <span>
                     <a href="https://www.urbanhire.com/" target="_blank" rel="noopener noreferrer"> web Urbanhire </a>
-                </span>, implementing UI/UX design mock-up into code using LESS, Jade, and JavaScript. And also ensure the web is responsive that can viewed on mobile as well as desktop.
+                </span>, developed a new Wordpress template for 
+                <span>
+                    <a href="https://www.urbanhire.com/blog/" target="_blank" rel="noopener noreferrer"> blog Urbanhire </a>
+                </span>, and 
+                <span>
+                <a href="https://resources.urbanhire.com/" target="_blank" rel="noopener noreferrer"> web Urbanhire resources</a>
+                </span>, implementing UI/UX design mock-up into code.  And also ensure the web is responsive that can be viewed on mobile as well as desktop.
             </p>),
         createData('2',
-            <p> Revamp
-            <span>
-                    <a href="https://www.urbanhire.com/blog/" target="_blank" rel="noopener noreferrer"> blog Urbanhire </a>
-                </span>and
-            <span>
-                    <a href="https://resources.urbanhire.com/" target="_blank" rel="noopener noreferrer"> web Urbanhire resources</a>
-                </span>. Both of the web is a Wordpress site. Responsible for making a new Wordpress template for the blog and the Urbanhire resources web. Implementing UI / UX design mock-up into code using HTML, SASS, JavaScript and PHP for code the server - side of Wordpress. And also ensure the web is responsive that can viewed on mobile as well as desktop.
-            </p>)
+            <p> Work closely with designers to develop the website revamp project using HTML, SASS, LESS, Jade, JavaScript, 
+                and PHP for code on the server-side of Wordpress. </p>)
+        ]
     ];
 
     return (
@@ -92,20 +126,40 @@ export default function Experience() {
                 spacing={0}>
                 <Grid item lg={10} xs={12}>
                     <h2 className={classes.intro}><span className={classes.smallIntro}>02.</span> Where I've Worked</h2>
-                    <h4 className={classes.jobTitle}>Front-end Engineer Intern<span className={classes.workAt}> @Urbanhire</span></h4>
-                    <p className={classes.date}>June - August 2019</p>
-                    <Grid container spacing={0}>
-                        <Grid item lg={8}>
-                            <Table className={classes.tables} size="small" aria-label="a dense table">
-                                <TableBody>
-                                    {rows.map(row => (
-                                        <tr key={row.id}>
-                                            <th align="left" className={classes.iconPad}>{<ArrowRightAltIcon style={{ color: '#00735C' }} />}</th>
-                                            <th align="left" className={classes.text}>{row.value}</th>
-                                        </tr>
-                                    ))}
-                                </TableBody>
-                            </Table>
+                    <Grid item lg={12}>
+                        <h4 className={classes.jobTitle}>Front-end Engineer<span className={classes.workAt}> @Advotics - Supply Chain SaaS</span></h4>
+                        <p className={classes.date}>August 2020 - Now</p>
+                        <Grid container spacing={0}>
+                            <Grid item lg={8}>
+                                <Table className={classes.tables} size="small" aria-label="a dense table">
+                                    <TableBody>
+                                        {rows[0].map(row => (
+                                            <tr key={row.id}>
+                                                <th align="left" className={classes.iconPad}>{<ArrowRightIcon style={{ color: '#00735C' }} />}</th>
+                                                <th align="left" className={classes.text}>{row.value}</th>
+                                            </tr>
+                                        ))}
+                                    </TableBody>
+                                </Table>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item lg={12}>
+                        <h4 align="right" className={classes.jobTitle}>Front-end Engineer Intern<span className={classes.workAt}> @Urbanhire</span></h4>
+                        <p align="right" className={classes.date}>June - August 2019</p>
+                        <Grid container spacing={0} justify="flex-end">
+                            <Grid item lg={8}>
+                                <Table className={classes.tables} size="small" aria-label="a dense table">
+                                    <TableBody>
+                                        {rows[1].map(row => (
+                                            <tr key={row.id}>
+                                                <th align="right" className={classes.textRight}>{row.value}</th>
+                                                <th align="right" className={classes.iconPad}>{<ArrowLeftIcon style={{ color: '#00735C' }} />}</th>
+                                            </tr>
+                                        ))}
+                                    </TableBody>
+                                </Table>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>

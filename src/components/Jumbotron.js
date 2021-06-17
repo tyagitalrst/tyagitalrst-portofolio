@@ -67,11 +67,10 @@ export default function Jumbotron() {
                 Tyagita Larasati.
             </h2>
             <h3 className={classes.role}>
-                I'm a <span>software engineer</span>.
+                I'm a <span>front-end engineer</span>.
             </h3>
             <p className={classes.subtitle}>
-                A final year computer science student based in Jakarta. <br />
-                Highly interested in web and mobile development.<br />
+                A passionate front-end engineer. Highly interested in web development.<br />
             </p>
             <Button className={classes.btn} color="secondary" variant="outlined" href="mailto:tyagitalarasati@gmail.com">
                 Get in touch
